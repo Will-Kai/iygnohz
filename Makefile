@@ -1,3 +1,6 @@
+static:
+	./python3 manage.py collectstatic
+
 start:
 	fab start
 
