@@ -25,5 +25,3 @@ virtualenv==15.0.2
 virtualenv-clone==0.2.6
 virtualenvwrapper==4.7.1
 zinnia-theme-bootstrap==0.5
-zinnia-theme-foundation==1.0.1
-zinnia-theme-html5==0.4
