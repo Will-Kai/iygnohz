@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from fabric.api import env, run
+from fabric.api import env, run, cd
 from fabric.contrib.project import rsync_project
 
 
@@ -16,6 +16,9 @@ def build():
 def deploy():
     run("mkdir -p %s" % remote_dir)
     rsync_project(local_dir=".", remote_dir=remote_dir, exclude=".git")
+    with cd(remote_dir):
+        run("source /opt/python3.4/bin/activate && make static")
+        run("source /opt/python3.4/bin/activate && pip install -r requirements.txt")
 
 
 def start():
