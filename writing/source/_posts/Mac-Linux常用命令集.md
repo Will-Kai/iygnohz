@@ -1,6 +1,6 @@
 title: Mac/Linux常用命令集
 date: 2015-12-19 16:59:02
-category: shell
+category: 技术
 tags:
 - shell
 - mysql
