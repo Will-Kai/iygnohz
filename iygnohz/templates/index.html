@@ -28,7 +28,7 @@
             </div>
 
             <div class="inner cover">
-                <h1 class="cover-heading">Hi, I'm Dai ZhongYi.</h1>
+                <h1 id="forme" class="cover-heading"></h1>
                 <br>
                 <br>
                 <p class="lead">
@@ -39,7 +39,7 @@
 
             <div class="mastfoot">
                 <div class="inner">
-                  <p>&copy; 2015 - 2016 <i class="fa fa-heart"></i>  <a href="https://git.io/zhongyi">iygnohz</a></p>
+                    <p>&copy; 2015 - 2016 <i class="fa fa-heart"></i>  <a href="https://git.io/zhongyi">iygnohz</a></p>
                 </div>
             </div>
 
@@ -49,5 +49,9 @@
 
 </div>
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock script %}
 
 {% block footer %}{% endblock footer %}
