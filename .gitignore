@@ -87,3 +87,5 @@ ENV/
 
 # Rope project settings
 .ropeproject
+writing/node_modules
+writing/public

@@ -15,12 +15,14 @@ def build():
 
 def deploy():
     run("mkdir -p %s" % remote_dir)
-    rsync_project(local_dir=".", remote_dir=remote_dir, exclude=".git")
+    rsync_project(local_dir=".", remote_dir=remote_dir, exclude=(".git", "node_modules",))
     with cd(remote_dir):
+        run("yum install -y gcc python-devel libevent-devel")
+        run("source /virtualenvs/iygnohz/bin/activate && pip install --upgrade pip setuptools")
         # Clear static files for generate new static files.
         run("rm -rf static")
-        run("source /opt/python3.4/bin/activate && make static")
-        run("source /opt/python3.4/bin/activate && pip install -r requirements.txt")
+        run("source /virtualenvs/iygnohz/bin/activate && pip install -r requirements.txt")
+        run("source /virtualenvs/iygnohz/bin/activate && make static")
 
 
 def start():
