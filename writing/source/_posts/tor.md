@@ -43,9 +43,10 @@ Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用�
 
     - tor
 
-        拷贝附录`torrc`文件到`/etc/tor/torrc`。
+        拷贝[torrc](https://raw.githubusercontent.com/PrinceTechs/use_tor/master/torrc)文件到`/etc/tor/torrc`。配置tor前置代理`HTTPProxy`、 `HTTPSProxy`。
 
         ```
+        wget https://raw.githubusercontent.com/PrinceTechs/use_tor/master/torrc
         sudo cp torrc /etc/tor/torrc
 
         # 开机自启
@@ -57,9 +58,10 @@ Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用�
 
     - privoxy
 
-        拷贝附录`config`文件到`/etc/privoxy/config`。
+        拷贝[config](https://raw.githubusercontent.com/PrinceTechs/use_tor/master/config)文件到`/etc/privoxy/config`。
 
         ```
+        wget https://raw.githubusercontent.com/PrinceTechs/use_tor/master/config
         sudo cp config /etc/privoxy/config
         systemctl enable privoxy
         systemctl start privoxy
@@ -77,9 +79,10 @@ Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用�
 
     - tor
 
-        拷贝附录`torrc`文件到`/usr/local/etc/tor/torrc`。
+        拷贝[torrc](https://raw.githubusercontent.com/PrinceTechs/use_tor/master/torrc)文件到`/usr/local/etc/tor/torrc`。配置tor前置代理`HTTPProxy`、 `HTTPSProxy`。
 
         ```
+        wget https://raw.githubusercontent.com/PrinceTechs/use_tor/master/torrc
         sudo cp torrc /usr/local/etc/tor/torrc
         brew services start tor
         tor start
@@ -87,9 +90,10 @@ Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用�
 
     - privoxy
 
-        拷贝附录`config`文件到`/usr/local/etc/privoxy/config`。
+        拷贝[config](https://raw.githubusercontent.com/PrinceTechs/use_tor/master/config)文件到`/usr/local/etc/privoxy/config`。
 
         ```
+        wget https://raw.githubusercontent.com/PrinceTechs/use_tor/master/config
         sudo cp config /usr/local/etc/privoxy/config
         brew services start privoxy
         /usr/local/opt/sbin/privoxy /usr/local/etc/privoxy/config
