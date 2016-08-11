@@ -21,6 +21,10 @@ Tor（The Onion Router，洋葱路由器）是实现匿名通信的自由软件�
 
 Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用来连接tor网络，privoxy用来将tor的socks代理转换为http代理，arm用来对tor进行监控（类似于top）和操作（切换出口IP）。**最终对外提供HTTP代理，`127.0.0.1:8118`。**
 
+#### 准备
+
+- VPN，比如多态、Shadowsocks等
+
 #### 安装
 
 - Centos
@@ -107,6 +111,17 @@ Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用�
         arm -i 9151
         ```
 
+#### 切换IP
+
+可以封装成脚本，crontab定时调用。
+
+```
+pidof tor | xargs sudo kill -HUP
+```
+效果图：
+![Arm](arm.jpg)
+
+
 ### Python示例
 
 ```
@@ -114,3 +129,11 @@ import requests
 
 requests.get('https://baidu.com', proxies={'http': '127.0.0.1:8118'})
 ```
+
+### 相关文章
+
+- [Tor wiki](https://zh.wikipedia.org/wiki/Tor)
+- [使用 Tor ——安全匿名地访问互联网](https://techyan.me/2016/03/26/%E4%BD%BF%E7%94%A8-tor-%E5%AE%89%E5%85%A8%E5%8C%BF%E5%90%8D%E5%9C%B0%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91/)
+- [Tor下载使用指南](http://www.tor123.biz/)
+- [Linux下Tor的安裝和Meek的配置（非Browser Bundle模式）](http://allinfa.com/linux-tor-meek.html)
+- [New Tor Identity in Terminal](http://stackoverflow.com/questions/16987518/how-to-request-new-tor-identity-in-terminal)
