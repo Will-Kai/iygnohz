@@ -21,6 +21,7 @@ Tor（The Onion Router，洋葱路由器）是实现匿名通信的自由软件�
 
 Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用来连接tor网络，privoxy用来将tor的socks代理转换为http代理，arm用来对tor进行监控（类似于top）和操作（切换出口IP）。**最终对外提供HTTP代理，`127.0.0.1:8118`。**
 
+<!-- more -->
 #### 准备
 
 - VPN，比如多态、Shadowsocks等
