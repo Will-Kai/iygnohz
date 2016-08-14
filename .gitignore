@@ -89,3 +89,4 @@ ENV/
 .ropeproject
 writing/node_modules
 writing/public
+.deploy_git
