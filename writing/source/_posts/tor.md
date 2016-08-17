@@ -120,7 +120,7 @@ Tor环境的搭建需要安装`tor`、`privoxy`、`arm`等程序，其中tor用�
 pidof tor | xargs sudo kill -HUP
 ```
 效果图：
-![Arm](arm.jpg)
+![Arm](/arm.jpg "tor demo")
 
 
 ### Python示例
