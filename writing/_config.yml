@@ -5,10 +5,10 @@
 # Site
 title: iYgnohZ
 subtitle: Step by step to be better.
-description:
-author: iygnohz
+description: Step by step to be better.
+author: iYgnohZ
 language: zh-Hans
-timezone:
+timezone: Asia/ShangHai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

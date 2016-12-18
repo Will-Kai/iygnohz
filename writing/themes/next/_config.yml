@@ -57,8 +57,8 @@ menu_icons:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
-# scheme: Pisces
+#scheme: Mist
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -291,9 +291,9 @@ facebook_sdk:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: FWk70ejpSABUb7o1brKNXQba-gzGzoHsz
+  app_key: WXUNenPdUWzcvrprkhhqRPmu
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
